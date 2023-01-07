@@ -1,0 +1,11 @@
+#sidebar-menu>ul>li ul {
+    padding-left: 30px;
+    list-style: none;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: 0.5rem;
+    color: #adb5bd;
+    content: var(--bs-breadcrumb-divider, "/");
+}
