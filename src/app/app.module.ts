@@ -12,6 +12,8 @@ import { NewEmployeeComponent } from './pages/new-employee/new-employee.componen
 import { NewDepartmentComponent } from './pages/new-department/new-department.component';
 import { DepartmentListComponent } from './pages/department-list/department-list.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,10 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

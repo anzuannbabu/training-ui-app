@@ -1,1 +1,67 @@
-<p>new-employee works!</p>
+ <!-- start page title -->
+ <div class="row">
+  <div class="col-12">
+      <div class="page-title-box">
+          <h4 class="page-title">Employee Registration</h4>
+          <div class="page-title-right">
+              <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item"><a href="javascript: void(0);">Shreyu</a></li>
+                  <li class="breadcrumb-item"><a href="employee-list.html">Employees</a></li>
+                  <li class="breadcrumb-item active">Register</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end page title -->
+
+
+
+
+
+<div class="row">
+  <div class="col-lg-12 col-sm-12 col-md-12">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="header-title mt-0 mb-1">New Employee Form</h4>
+              <p class="sub-header">Register New Employee Here.</p>
+
+              <form [formGroup]="empForm" (ngSubmit)="onSave()">
+                  <div class="mb-3">
+                      <label class="form-label" for="employee-name">Name</label>
+                      <input type="text" id="employee-name" formControlName="empname" class="form-control" placeholder="Name">
+                  </div>
+                  <!-- <div class="mb-3">
+                      <label class="form-label" for="employee-number">Employee No.</label>
+                      <input type="text" id="employee-number" formControlName="empname" class="form-control" placeholder="Employee No.">
+                  </div> -->
+                  <div class="mb-3">
+                      <label class="form-label">Join Date</label>
+                      <input type="text" id="basic-datepicker" class="form-control" formControlName="dateofjoin" placeholder="Basic datepicker">
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label" for="employee-job">Job</label>
+                      <input type="text" id="employee-job" class="form-control" formControlName="job" placeholder="Job">
+                  </div>
+                  <div class="mb-3">
+                      <label class="form-label" for="employee-salary">Salary</label>
+                      <input type="number" min="0" id="employee-salary" class="form-control" formControlName="salary" placeholder="Salary">
+                  </div>
+
+                  <hr>
+                  <div class="d-flex justify-content-end">
+                      <button class="btn btn-primary">Submit</button>
+                  </div>
+
+
+
+              </form>
+
+          </div>
+
+      </div> <!-- end card -->
+  </div> <!-- end col -->
+
+
+</div>
+<!-- end row -->

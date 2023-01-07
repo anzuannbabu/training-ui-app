@@ -1,151 +1,141 @@
-  <!-- start page title -->
-              <!-- start page title -->
-              <div class="row">
-                <div class="col-12">
-                    <div class="page-title-box">
-                        <h4 class="page-title">Dashboard</h4>
-                        <div class="page-title-right">
-                            <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="/">Shreyu</a></li>
-                                <li class="breadcrumb-item active">Dashboard</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
+<!-- start page title -->
+<!-- start page title -->
+<div class="row">
+  <div class="col-12">
+    <div class="page-title-box">
+      <h4 class="page-title">Dashboard</h4>
+      <div class="page-title-right">
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a href="/">Shreyu</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end page title -->
+<!-- end page title -->
+
+<!-- stats + charts -->
+<div class="row">
+  <div class="col-xl-3">
+    <div class="card">
+      <div class="card-body p-0">
+        <div class="p-3">
+          <div class="dropdown float-end">
+            <a
+              href="#"
+              class="dropdown-toggle arrow-none text-muted"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="uil uil-ellipsis-v"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item">
+                <i class="uil uil-refresh me-2"></i>Refresh
+              </a>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item">
+                <i class="uil uil-user-plus me-2"></i>Add New
+              </a>
+              <div class="dropdown-divider"></div>
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item text-danger">
+                <i class="uil uil-exit me-2"></i>Exit
+              </a>
             </div>
-            <!-- end page title -->
-            <!-- end page title -->
+          </div>
 
+          <h5 class="card-title header-title mb-0">Overview</h5>
+        </div>
 
+        <!-- stat 1 -->
+        <div class="d-flex p-3 border-bottom">
+          <div class="flex-grow-1">
+            <h4 class="mt-0 mb-1 fs-22">121,000</h4>
+            <span class="text-muted">Total Visitors</span>
+          </div>
+          <i
+            data-feather="users"
+            class="align-self-center icon-dual icon-md"
+          ></i>
+        </div>
 
-            <!-- stats + charts -->
-            <div class="row">
-                <div class="col-xl-3">
-                    <div class="card">
-                        <div class="card-body p-0">
-                            <div class="p-3">
-                                <div class="dropdown float-end">
-                                    <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="uil uil-ellipsis-v"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <i class="uil uil-refresh me-2"></i>Refresh
-                                        </a>
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item">
-                                            <i class="uil uil-user-plus me-2"></i>Add New
-                                        </a>
-                                        <div class="dropdown-divider"></div>
-                                        <!-- item-->
-                                        <a href="javascript:void(0);" class="dropdown-item text-danger">
-                                            <i class="uil uil-exit me-2"></i>Exit
-                                        </a>
-                                    </div>
-                                </div>
+        <!-- stat 2 -->
+        <div class="d-flex p-3 border-bottom">
+          <div class="flex-grow-1">
+            <h4 class="mt-0 mb-1 fs-22">21,000</h4>
+            <span class="text-muted">Total Product Views</span>
+          </div>
+          <i
+            data-feather="image"
+            class="align-self-center icon-dual icon-md"
+          ></i>
+        </div>
 
-                                <h5 class="card-title header-title mb-0">Overview</h5>
-                            </div>
+        <!-- stat 3 -->
+        <div class="d-flex p-3 border-bottom">
+          <div class="flex-grow-1">
+            <h4 class="mt-0 mb-1 fs-22">$21.5</h4>
+            <span class="text-muted">Revenue Per Visitor</span>
+          </div>
+          <i
+            data-feather="shopping-bag"
+            class="align-self-center icon-dual icon-md"
+          ></i>
+        </div>
 
-                            <!-- stat 1 -->
-                            <div class="d-flex p-3 border-bottom">
-                                <div class="flex-grow-1">
-                                    <h4 class="mt-0 mb-1 fs-22">121,000</h4>
-                                    <span class="text-muted">Total Visitors</span>
-                                </div>
-                                <i data-feather="users" class="align-self-center icon-dual icon-md"></i>
-                            </div>
+        <a href="#" class="p-2 d-block text-end"
+          >View All <i class="uil-arrow-right"></i
+        ></a>
+      </div>
+    </div>
+  </div>
 
-                            <!-- stat 2 -->
-                            <div class="d-flex p-3 border-bottom">
-                                <div class="flex-grow-1">
-                                    <h4 class="mt-0 mb-1 fs-22">21,000</h4>
-                                    <span class="text-muted">Total Product Views</span>
-                                </div>
-                                <i data-feather="image" class="align-self-center icon-dual icon-md"></i>
-                            </div>
+  <!-- Recent orders -->
+  <div class="col-xl-9">
+    <div class="card">
+      <div class="card-body">
+        <a href="#" class="btn btn-primary btn-sm float-end">
+          <i class="uil uil-export me-1"></i> Export
+        </a>
+        <h5 class="card-title mt-0 mb-0 header-title">Recent Employees</h5>
 
-                            <!-- stat 3 -->
-                            <div class="d-flex p-3 border-bottom">
-                                <div class="flex-grow-1">
-                                    <h4 class="mt-0 mb-1 fs-22">$21.5</h4>
-                                    <span class="text-muted">Revenue Per Visitor</span>
-                                </div>
-                                <i data-feather="shopping-bag" class="align-self-center icon-dual icon-md"></i>
-                            </div>
+        <div class="table-responsive mt-4 mb-2">
+          <table class="table table-hover table-nowrap mb-0">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Job</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Join Date</th>
+              </tr>
+            </thead>
+            <tbody>''
+              <tr *ngFor="let data of employees" >
+                <td>{{data?.empid}}</td>
+                <td>{{data?.empname}}</td>
+                <td>{{data?.job}}</td>
+                <td>{{data?.salary|currency:'INR'}}</td>
+                <td>{{data?.dateofjoin|date}}</td>
+                <!-- <td>
+                  <span class="badge badge-soft-warning py-1">Pending</span>
+                </td> -->
+              </tr>
 
-                            <a href="#" class="p-2 d-block text-end">View All <i class="uil-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent orders -->
-                <div class="col-xl-9">
-                    <div class="card">
-                        <div class="card-body">
-                            <a href="#" class="btn btn-primary btn-sm float-end">
-                                <i class='uil uil-export me-1'></i> Export
-                            </a>
-                            <h5 class="card-title mt-0 mb-0 header-title">Recent Orders</h5>
-
-                            <div class="table-responsive mt-4 mb-2">
-                                <table class="table table-hover table-nowrap mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Product</th>
-                                            <th scope="col">Customer</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>#98754</td>
-                                            <td>ASOS Ridley High</td>
-                                            <td>Otto B</td>
-                                            <td>$79.49</td>
-                                            <td><span class="badge badge-soft-warning py-1">Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>#98753</td>
-                                            <td>Marco Lightweight Shirt</td>
-                                            <td>Mark P</td>
-                                            <td>$125.49</td>
-                                            <td><span class="badge badge-soft-success py-1">Delivered</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>#98752</td>
-                                            <td>Half Sleeve Shirt</td>
-                                            <td>Dave B</td>
-                                            <td>$35.49</td>
-                                            <td><span class="badge badge-soft-danger py-1">Declined</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>#98751</td>
-                                            <td>Lightweight Jacket</td>
-                                            <td>Shreyu N</td>
-                                            <td>$49.49</td>
-                                            <td><span class="badge badge-soft-success py-1">Delivered</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>#98750</td>
-                                            <td>Marco Shoes</td>
-                                            <td>Rik N</td>
-                                            <td>$69.49</td>
-                                            <td><span class="badge badge-soft-danger py-1">Declined</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div> <!-- end table-responsive-->
-                        </div> <!-- end card-body-->
-                    </div> <!-- end card-->
-                </div> <!-- end col-->
-                <!-- ./Recent orders -->
-            </div>
-            <!-- row -->
+            </tbody>
+          </table>
+        </div>
+        <!-- end table-responsive-->
+      </div>
+      <!-- end card-body-->
+    </div>
+    <!-- end card-->
+  </div>
+  <!-- end col-->
+  <!-- ./Recent orders -->
+</div>
+<!-- row -->
