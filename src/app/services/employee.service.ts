@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -9,7 +9,9 @@ export class EmployeeService {
   constructor(private http: HttpClient) {}
 
   getAll() {
-    return this.http.get(environment.api + '/employees');
+    const token =JSON.parse(sessionStorage.getItem('user-token')||'{}');
+    const headers = new HttpHeaders().append('Authorization', token['token'])
+    return this.http.get(environment.api + '/employees',{headers: headers});
   }
 
   add(body: any) {

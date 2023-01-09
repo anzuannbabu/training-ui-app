@@ -14,6 +14,7 @@ import { DepartmentListComponent } from './pages/department-list/department-list
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ValidationMessagesComponent } from './layout/validation-messages/validation-messages.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NewEmployeeComponent,
     NewDepartmentComponent,
     DepartmentListComponent,
-    SidebarComponent
+    SidebarComponent,
+    ValidationMessagesComponent
   ],
   imports: [
     BrowserModule,

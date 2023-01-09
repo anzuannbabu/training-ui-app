@@ -9,13 +9,15 @@ import { EmployeeService } from 'src/app/services/employee.service';
   styleUrls: ['./new-employee.component.scss'],
 })
 export class NewEmployeeComponent implements OnInit {
-  empForm!: FormGroup;
+  empForm!: FormGroup<{ empname: FormControl<null>; job: FormControl<null>; salary: FormControl<null>; dateofjoin: FormControl<null>; }>;
+  submitted = false;
+
 
   constructor(private empService: EmployeeService, private router: Router) {}
 
   ngOnInit(): void {
     this.empForm = new FormGroup({
-      empname: new FormControl(null, [Validators.required]),
+      empname: new FormControl(null, [Validators.required,Validators.email]),
       job: new FormControl(null, [Validators.required]),
       salary: new FormControl(null, [Validators.required]),
       dateofjoin: new FormControl(null, [Validators.required]),
@@ -23,7 +25,12 @@ export class NewEmployeeComponent implements OnInit {
   }
 
   onSave() {
+    this.submitted = true;
     const values = this.empForm.value;
+
+    if(this.empForm.invalid) return;
+
+    console.log(this.empForm.get('empname')?.errors);
 
     this.empService.add(values).subscribe((res) => {
       this.router.navigateByUrl('/app')

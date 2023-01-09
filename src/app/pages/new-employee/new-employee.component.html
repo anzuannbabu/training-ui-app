@@ -30,6 +30,7 @@
                   <div class="mb-3">
                       <label class="form-label" for="employee-name">Name</label>
                       <input type="text" id="employee-name" formControlName="empname" class="form-control" placeholder="Name">
+                      <app-validation-messages *ngIf="submitted" [formGroup]="empForm" controlName="empname"></app-validation-messages>
                   </div>
                   <!-- <div class="mb-3">
                       <label class="form-label" for="employee-number">Employee No.</label>
@@ -38,19 +39,22 @@
                   <div class="mb-3">
                       <label class="form-label">Join Date</label>
                       <input type="text" id="basic-datepicker" class="form-control" formControlName="dateofjoin" placeholder="Basic datepicker">
+                      <app-validation-messages [formGroup]="empForm" controlName="dateofjoin"></app-validation-messages>
                   </div>
                   <div class="mb-3">
                       <label class="form-label" for="employee-job">Job</label>
                       <input type="text" id="employee-job" class="form-control" formControlName="job" placeholder="Job">
+                      <app-validation-messages [formGroup]="empForm" controlName="job"></app-validation-messages>
                   </div>
                   <div class="mb-3">
                       <label class="form-label" for="employee-salary">Salary</label>
                       <input type="number" min="0" id="employee-salary" class="form-control" formControlName="salary" placeholder="Salary">
+                      <app-validation-messages [formGroup]="empForm" controlName="salary"></app-validation-messages>
                   </div>
 
                   <hr>
                   <div class="d-flex justify-content-end">
-                      <button class="btn btn-primary">Submit</button>
+                      <button class="btn btn-primary" >Submit</button>
                   </div>
 
 

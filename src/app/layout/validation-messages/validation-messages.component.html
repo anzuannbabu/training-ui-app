@@ -1,0 +1,2 @@
+<p class="text-danger" *ngIf="controlName && formGroup.controls[controlName].getError('required')">{{controlName}} is required</p>
+<p class="text-danger" *ngIf="controlName && formGroup.controls[controlName].getError('email')">Invalid Email</p>
