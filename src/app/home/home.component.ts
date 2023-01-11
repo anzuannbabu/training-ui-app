@@ -1,10 +1,19 @@
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../services/employee.service';
+import { TokenInterceptor } from '../token.interceptor';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+      // providers: [
+      //   EmployeeService,
+      //   {
+      //     provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true
+      //   }
+      // ]
+
 })
 export class HomeComponent implements OnInit {
 

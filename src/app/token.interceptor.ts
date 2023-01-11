@@ -6,10 +6,11 @@ import {
   HttpInterceptor,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AuthService } from './services/auth.service';
 
 @Injectable()
 export class TokenInterceptor implements HttpInterceptor {
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   intercept(
     request: HttpRequest<unknown>,
@@ -17,9 +18,9 @@ export class TokenInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<unknown>> {
 
     if (!request.url.includes('/token') && !request.url.includes('/register')) {
-      const token = JSON.parse(sessionStorage.getItem('user-token') || '{}');
+      const token = this.authService.getAccessToken();
       request = request.clone({
-        headers: request.headers.append('Authorization', token['token']),
+        headers: request.headers.append('Authorization', token),
       });
     }
 

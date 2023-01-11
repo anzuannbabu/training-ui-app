@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
     pwd: FormControl<null>;
   }>;
   submitted: boolean = false;
+  error: string | null = null;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -32,9 +33,11 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     if (this.form.invalid) return;
 
-    this.authService.login(values as any).subscribe((res) => {
-      sessionStorage.setItem('user-token', JSON.stringify(res));
-      this.router.navigateByUrl('/app');
-    });
+    this.authService.login(values as any).subscribe(
+      (res) => {},
+      (err) => {
+        this.error = err?.error?.message;
+      }
+    );
   }
 }

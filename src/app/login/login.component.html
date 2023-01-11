@@ -17,6 +17,8 @@
                                   Enter your email address and password to access admin panel.
                               </p>
 
+                              <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
                               <form [formGroup]="form" (ngSubmit)="onLogin()" class="authentication-form">
                                   <div class="mb-3">
                                       <label class="form-label">Email Address</label>
