@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TimeoutError } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -36,7 +38,12 @@ export class LoginComponent implements OnInit {
     this.authService.login(values as any).subscribe(
       (res) => {},
       (err) => {
-        this.error = err?.error?.message;
+        console.log("error => ", err);
+        if(err instanceof TimeoutError) {
+          this.error = "Server is busy";
+        } else {
+          this.error = err?.error?.message;
+        }
       }
     );
   }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { map, tap } from 'rxjs';
+import { catchError, map, tap, throwError, timeout } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { User } from '../model/user.model';
 
@@ -26,11 +26,16 @@ export class AuthService {
 
   login(request: User) {
     return this.http.post(environment.api + '/token', request).pipe(
+      timeout(3000),
       tap((res: any) => {
         sessionStorage.setItem(USER_TOKEN_KEY, JSON.stringify(res));
         sessionStorage.setItem(USER_TOKEN_KEY + '_plain', res['token']);
         this.router.navigateByUrl('/app');
-      })
+      }),
+      // catchError(err => {
+      //   console.log("error ocurred", err);
+      //   return throwError(err)
+      // })
       // map(res => {
 
       // })
