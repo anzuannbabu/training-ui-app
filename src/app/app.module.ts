@@ -12,9 +12,10 @@ import { NewEmployeeComponent } from './pages/new-employee/new-employee.componen
 import { NewDepartmentComponent } from './pages/new-department/new-department.component';
 import { DepartmentListComponent } from './pages/department-list/department-list.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationMessagesComponent } from './layout/validation-messages/validation-messages.component';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,11 @@ import { ValidationMessagesComponent } from './layout/validation-messages/valida
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

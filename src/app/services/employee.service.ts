@@ -9,9 +9,9 @@ export class EmployeeService {
   constructor(private http: HttpClient) {}
 
   getAll() {
-    const token =JSON.parse(sessionStorage.getItem('user-token')||'{}');
-    const headers = new HttpHeaders().append('Authorization', token['token'])
-    return this.http.get(environment.api + '/employees',{headers: headers});
+    // const token =JSON.parse(sessionStorage.getItem('user-token')||'{}');
+    // const headers = new HttpHeaders().append('Authorization', token['token'])
+    return this.http.get(environment.api + '/employees');
   }
 
   add(body: any) {
