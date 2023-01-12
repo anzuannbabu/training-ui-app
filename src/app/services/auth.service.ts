@@ -26,7 +26,7 @@ export class AuthService {
 
   login(request: User) {
     return this.http.post(environment.api + '/token', request).pipe(
-      timeout(3000),
+      timeout(60000*5),
       tap((res: any) => {
         sessionStorage.setItem(USER_TOKEN_KEY, JSON.stringify(res));
         sessionStorage.setItem(USER_TOKEN_KEY + '_plain', res['token']);
