@@ -109,15 +109,20 @@
               <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Full Name</th>
+                <th>Profile</th>
                 <th scope="col">Job</th>
                 <th scope="col">Salary</th>
                 <th scope="col">Join Date</th>
               </tr>
             </thead>
-            <tbody>''
-              <tr *ngFor="let data of employees" >
-                <td>{{data?.empid}}</td>
+            <tbody>
+              <tr *ngFor="let data of employees;let i = index;" >
+                <td>{{i+1}}</td>
                 <td>{{data?.empname}}</td>
+                <td>
+                  <img [src]="getProfileImage(data?.profilepic)" class="profile-avatar">
+                  <!-- <app-profile-preview [imgUrl]="data?.profilepic"></app-profile-preview> -->
+                </td>
                 <td>{{data?.job}}</td>
                 <td>{{data?.salary|currency:'INR'}}</td>
                 <td>{{data?.dateofjoin|date}}</td>
@@ -139,3 +144,16 @@
   <!-- ./Recent orders -->
 </div>
 <!-- row -->
+
+
+<!-- <div class="row">
+  <div class="col">
+    <div class="btn-group dropdown mt-2 me-1">
+
+      <img class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" src="http://localhost:8082/uploads/2021-06-00620undefined-1673593866386.jpeg" width="50" height="60" style="padding: 0;"  alt="">
+      <div class="dropdown-menu dropdown-lg p-3" style="">
+         <img src="http://localhost:8082/uploads/2021-06-00620undefined-1673593866386.jpeg" width="280" style="border:1px solid #dedede; padding:5px;" alt="">
+      </div>
+  </div>
+  </div>
+</div> -->

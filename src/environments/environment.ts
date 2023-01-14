@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:8081'
+  // api: 'http://localhost:8081',//mysql based api
+  api: 'http://localhost:8082',//mongo based api
 };
 
 /*

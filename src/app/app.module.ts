@@ -16,6 +16,7 @@ import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationMessagesComponent } from './layout/validation-messages/validation-messages.component';
 import { TokenInterceptor } from './token.interceptor';
+import { ProfilePreviewComponent } from './layout/profile-preview/profile-preview.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TokenInterceptor } from './token.interceptor';
     NewDepartmentComponent,
     DepartmentListComponent,
     SidebarComponent,
-    ValidationMessagesComponent
+    ValidationMessagesComponent,
+    ProfilePreviewComponent
   ],
   imports: [
     BrowserModule,

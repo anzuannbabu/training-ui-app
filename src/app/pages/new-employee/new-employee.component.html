@@ -51,6 +51,11 @@
                       <input type="number" min="0" id="employee-salary" class="form-control" formControlName="salary" placeholder="Salary">
                       <app-validation-messages [formGroup]="empForm" controlName="salary"></app-validation-messages>
                   </div>
+                  <div class="mb-3">
+                      <label class="form-label" for="employee-salary">Profile Picture</label>
+                      <input type="file" id="employee-salary" (change)="uploadFile($event)" class="form-control" formControlName="profileImage" placeholder="profileImage">
+                      <app-validation-messages [formGroup]="empForm" controlName="profileImage"></app-validation-messages>
+                  </div>
 
                   <hr>
                   <div class="d-flex justify-content-end">

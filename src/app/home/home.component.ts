@@ -1,5 +1,6 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { EmployeeService } from '../services/employee.service';
 import { TokenInterceptor } from '../token.interceptor';
 
@@ -29,6 +30,11 @@ export class HomeComponent implements OnInit {
     }, err => {
 
     })
+  }
+
+
+  getProfileImage(imgUrl:string) : string {
+    return environment.api + '/' + imgUrl;
   }
 
 }
