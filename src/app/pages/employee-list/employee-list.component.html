@@ -1,0 +1,81 @@
+ <!-- start page title -->
+ <div class="row">
+  <div class="col-12">
+      <div class="page-title-box">
+          <h4 class="page-title">Employees</h4>
+          <div class="page-title-right">
+              <ol class="breadcrumb m-0">
+                  <li class="breadcrumb-item"><a href="/">Shreyu</a></li>
+                  <li class="breadcrumb-item"><a href="department-list.html">Employees</a></li>
+                  <li class="breadcrumb-item active">List</li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- end page title -->
+
+<div class="row">
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+              <h4 class="header-title mt-0 mb-1">Registered Employees</h4>
+              <p class="sub-header">
+                 List of All Registered Employees
+              </p>
+
+              <table id="datatable-buttons" class="table dt-responsive nowrap w-100">
+                  <thead>
+                      <tr>
+                          <th>Employee No.</th>
+                          <th>Profile</th>
+                          <th>Name</th>
+                          <th>Position</th>
+                          <th>Join date</th>
+                          <th>Salary</th>
+                          <th>Actions</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <ng-container *ngIf="employees$|async as employees">
+                      <tr *ngFor="let data of employees;let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>
+                          <img [src]="getProfileImage(data?.profilepic)" class="profile-avatar">
+                        </td>
+                        <td>{{data?.empname}}</td>
+                        <td>{{data?.job}}</td>
+
+                        <td>{{data?.dateofjoin|date}}</td>
+                        <td>{{data?.salary|currency:'INR'}}</td>
+                        <td>
+                             <!-- action section -->
+                             <div class="dropdown d-inline-block">
+                                <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i data-feather="more-horizontal"></i>
+                                    Manage
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a href="#!" class="dropdown-item"><i data-feather="eye" class="text-muted"></i> View</a></li>
+                                    <li><a style="cursor: pointer;" (click)="onEdit(data)" class="dropdown-item edit-item-btn"> <i data-feather="edit-2" class="text-muted"></i> Edit</a></li>
+                                    <li>
+                                        <a style="cursor: pointer;" (click)="onDelete(data)" class="dropdown-item remove-item-btn">
+                                            <i data-feather="trash-2" class="text-muted"></i> Delete
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    </ng-container>
+
+
+
+                  </tbody>
+              </table>
+
+          </div> <!-- end card body-->
+      </div> <!-- end card -->
+  </div><!-- end col-->
+</div>
+<!-- end row-->

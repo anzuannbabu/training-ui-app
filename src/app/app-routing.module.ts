@@ -42,6 +42,10 @@ const routes: Routes = [
         component: NewEmployeeComponent,
       },
       {
+        path: 'edit-employee/:id',
+        component: NewEmployeeComponent,
+      },
+      {
         path: 'department-list',
         component: DepartmentListComponent,
       },
