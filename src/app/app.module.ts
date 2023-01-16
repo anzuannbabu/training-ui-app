@@ -17,6 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValidationMessagesComponent } from './layout/validation-messages/validation-messages.component';
 import { TokenInterceptor } from './token.interceptor';
 import { ProfilePreviewComponent } from './layout/profile-preview/profile-preview.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { DashboardChartComponent } from './charts/dashboard-chart/dashboard-chart.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +33,16 @@ import { ProfilePreviewComponent } from './layout/profile-preview/profile-previe
     DepartmentListComponent,
     SidebarComponent,
     ValidationMessagesComponent,
-    ProfilePreviewComponent
+    ProfilePreviewComponent,
+    DashboardChartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule,
   ],
   providers: [
     {

@@ -29,14 +29,15 @@
               "src/assets/images"
             ],
             "styles": [
-              "src/assets/css/app.min.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/icons.min.css",
+              "src/assets/css/app.min.css",
               "src/assets/css/custom.css",
               "src/styles.scss"
             ],
             "scripts": [
               "src/assets/js/vendor.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js",
               "src/assets/js/app.min.js"
 
             ]
